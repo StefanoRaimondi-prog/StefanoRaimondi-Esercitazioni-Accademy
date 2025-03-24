@@ -1,0 +1,101 @@
+/* Layout generale */
+:host {
+    display: block;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #fdfdfd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Titolo */
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  /* Form */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Lista film */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Card film */
+  li {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    transition: transform 0.2s;
+  }
+  
+  li:hover {
+    transform: scale(1.01);
+  }
+  
+  h3 {
+    margin: 0 0 10px;
+    color: #222;
+  }
+  
+  p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 13px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #c82333;
+  }
+  
+  /* Messaggio vuoto */
+  p[ng-reflect-ng-if="true"] {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+  }
+  

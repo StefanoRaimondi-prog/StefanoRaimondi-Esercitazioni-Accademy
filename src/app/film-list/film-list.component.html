@@ -1,0 +1,50 @@
+<h2>Catalogo Film</h2>
+
+<form (ngSubmit)="aggiungiFilm()">
+  <div>
+    <label>Titolo:</label>
+    <input type="text" [(ngModel)]="nuovoFilm.titolo" name="titolo" required />
+  </div>
+
+  <div>
+    <label>Regista:</label>
+    <input type="text" [(ngModel)]="nuovoFilm.regista" name="regista" required />
+  </div>
+
+  <div>
+    <label>Anno:</label>
+    <input type="number" [(ngModel)]="nuovoFilm.anno" name="anno" required />
+  </div>
+
+  <div>
+    <label>Genere:</label>
+    <input type="text" [(ngModel)]="nuovoFilm.genere" name="genere" required />
+  </div>
+
+  <div>
+    <label>Descrizione:</label>
+    <textarea [(ngModel)]="nuovoFilm.descrizione" name="descrizione"></textarea>
+  </div>
+
+  <div>
+    <label>Rating:</label>
+    <input type="number" [(ngModel)]="nuovoFilm.rating" name="rating" min="1" max="5" />
+  </div>
+
+  <button type="submit">Aggiungi Film</button>
+</form>
+
+<!-- MESSAGGIO SE VUOTO -->
+<p *ngIf="catalogoFilm.length === 0">Nessun film presente.</p>
+
+<!-- LISTA DEI FILM -->
+<ul>
+  <li *ngFor="let film of catalogoFilm; let i = index">
+    <h3>{{ film.titolo }} ({{ film.anno }})</h3>
+    <p><strong>Regista:</strong> {{ film.regista }}</p>
+    <p><strong>Genere:</strong> {{ film.genere }}</p>
+    <p>{{ film.descrizione }}</p>
+    <p><strong>Rating:</strong> {{ film.rating }}/5</p>
+    <button (click)="rimuoviFilm(i)">Rimuovi</button>
+  </li>
+</ul>
